@@ -144,35 +144,34 @@ header {
     width: 77.5%;
     margin-left: 14%; }
   .leftsidemenus h3 {
-    padding-left: 5px;
     padding-bottom: 10px;
+    padding-left: 5px;
     font-family: sans-serif;
-    font-size: 22px;
-    font-weight: 700;
-    font-size: 13px; }
+    font-size: 13px;
+    font-weight: 700; }
   .leftsidemenus .pinkline {
     height: 5px;
     display: block;
     background-color: #861333; }
   .leftsidemenus .accordion {
     width: 100%;
-    margin: 0 auto 20px;
-    background: #FFF;
+    background: #fff;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
+    margin: 0 auto 20px;
     	/**
      * Submenu
      -----------------------------*/ }
     .leftsidemenus .accordion .link {
-      cursor: pointer;
-      display: block;
       padding: 15px 15px 15px 10px;
+      border-bottom: 1px solid #CCC;
+      display: block;
+      position: relative;
       color: #4D4D4D;
+      cursor: pointer;
       font-family: sans-serif;
       font-size: 14px;
-      border-bottom: 1px solid #CCC;
-      position: relative;
       -webkit-transition: all 0.4s ease;
       -o-transition: all 0.4s ease;
       transition: all 0.4s ease; }
@@ -279,10 +278,10 @@ header {
     vertical-align: top; }
     .rightsidecontent .marketingassets-ul li a {
       color: #000;
-      text-decoration: none;
       display: block;
       position: relative;
       background: rgba(0, 0, 0, 0);
+      text-decoration: none;
       transition: .5s all linear; }
       .rightsidecontent .marketingassets-ul li a:hover .overlay {
         background: rgba(0, 0, 0, 0.5);
@@ -298,9 +297,9 @@ header {
       display: block;
       position: absolute;
       top: 0;
+      right: 0;
       bottom: 0;
       left: 0;
-      right: 0;
       background: rgba(0, 0, 0, 0);
       color: transparent;
       transition: .5s linear all; }
@@ -329,11 +328,11 @@ header {
       display: inline-block;
       vertical-align: top; }
       .rightsidecontent .recipe-col-ul li a {
-        color: #000;
-        text-decoration: none;
         display: block;
         position: relative;
         background: rgba(0, 0, 0, 0);
+        color: #000;
+        text-decoration: none;
         transition: .5s all linear; }
         .rightsidecontent .recipe-col-ul li a:hover .rc-overlay {
           background: rgba(0, 0, 0, 0.5);
@@ -349,9 +348,9 @@ header {
         display: block;
         position: absolute;
         top: 0;
+        right: 0;
         bottom: 0;
         left: 0;
-        right: 0;
         background: rgba(0, 0, 0, 0);
         color: transparent;
         transition: .5s linear all; }
