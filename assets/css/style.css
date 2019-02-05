@@ -1,160 +1,159 @@
-@charset "utf-8";
+html, body, div, span, applet, object, iframe, h1, h2, h3,
+h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address,
+big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, b, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td, article,
+aside, canvas, details, embed, figure, figcaption, footer,
+header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
 
-/*------------------------------------------------------------------
-  [Table of contents]
-  * To keep an overview of structure of your code, we make use of table of 
-  * content. Table of content is use display the overall tree structure of your
-  * Layout. 
-  * (NOTE: Remove this commented code once you start developing the code.
-  * Remove the following table of content and add your own as this is just and 
-  * example to let you know)
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
 
-  1. CSS Reset Code
-    1.1. Eric Meyers Reset/HTML5 display-role reset for older browsers
-    1.2. Clear Fix
-    1.3. Font class declaration
-  2. Body
-  3. Header / .header
-    2.1. Navigation / .navbar
-  4. Content / .content
-    4.1. Left column / .leftcolumn
-    4.2. Right column / .rightcolumn
-    4.3. Sidebar / .sidebar
-      4.3.1. RSS / .rss
-      4.3.2. Search / .search
-      4.3.3. Boxes / .box
-      4.3.4. Sideblog / .sideblog
-      4.3.5. Advertisements / .ads
-  5. Footer / .footer
-  ------------------------------------------------------------------*/
+body {
+  line-height: 1; }
 
-/*------------------------------------------------------------------
-  [Color codes]
-  * Mention the color code you have used in your html document for the respective
-  * elements given as follow. 
-  * (NOTE: Remove this commented code once you start developing the code. 
-  * Remove the following color code and add your own as this is just and 
-  * example to let you know)
+ol, ul {
+  list-style: none; }
 
-  Header nav: #e5e5df (Cararra)
-  Header nav a (hover): #fff (white)
-  Header nav a (active): #fff (white)
-  -------------------------------------------------------------------*/
+blockquote, q {
+  quotes: none; }
 
-/*------------------------------------------------------------------
-  [Typography]
-  * Mention the Typography you have used in your html document for the respective
-  * elements given as follow.
-  * (NOTE: Remove this commented code once you start developing the code. 
-  * Remove the following typography and add your own as this is just and 
-  * example to let you know)
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
 
-  Header nav a: 16px 'Futura Bold', 'Gill Sans', Arial, 'Helvetica Neue', Helvetica, sans-serif;
-  View-register li a : 12px 'Futura Bold', 'Gill Sans', Arial, 'Helvetica Neue', Helvetica, sans-serif;
-  -------------------------------------------------------------------*/
+q:before, q:after {
+  content: '';
+  content: none; }
 
-/* ==========================================================================
-   1. CSS Reset Code
-   ========================================================================== */
-
-/* 1.1. Eric Meyers Reset
-   http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-   ========================================================================== */
-   html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
-   blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img,
-   ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
-   dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody,
-   tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure,
-   figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
-   time, mark, audio, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-   }
-
-   /* HTML5 display-role reset for older browsers */
-   article, aside, details, figcaption, figure,
-   footer, header, hgroup, menu, nav, section {
-    display: block;
-   }
-
-   /* Force scrollbar */
-   html { overflow-y: scroll; }
-
-   /* Align radios and text inputs with their label */
-
-   input[type='radio'] { vertical-align: text-bottom; }
-
-   /* Hand cursor on clickable input elements */
-   label,
-   input[type='button'],
-   input[type='submit'],
-   button {
-    cursor: pointer;
-   }
-
-   strong {
-    font-weight: bold;
-    font-family: inherit;
-    font-size: inherit;
-   }
-
-   em { font-style: italic; }
-
-   img {
-    border: 0;
-    vertical-align: middle;
-   }
-
-   sub,
-   sup {
-    vertical-align: baseline;
-    position: relative;
-    font-size: 55%;
-    line-height: 0;
-   }
-
-   sup { top: -.7em; }
-
-   sub { bottom: -.25em; }
-
-/* 1.2. Clear Fix
-========================================================================== */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
 
 .cf:before,
 .cf:after {
   display: table;
-  content: " ";
-}
+  content: " "; }
 
-.cf:after { clear: both; }
+.cf:after {
+  clear: both; }
 
-.cf { *zoom: 1; }
+.cf {
+  *zoom: 1; }
 
-/* 1.3. Font class declaration
-========================================================================== */
-/*
- * Mention the font property (eg: font-family, font-size, font-weight, font-style
- * etc) that have been commonly used in the html document. Make a class of it and
- * apply to the element wherever it is needed. If any single property in changed,
- * then override only that property in the particular class which is used for the
- * element.
- * (NOTE: Remove this commented code once you start 
- * developing the code. Remove the following font class and add your own
- * as this is just and example to let you know. If there is only one font family
- * followed throughout the site, then menstion the font property in body. No need
- * of creating an extra class for it) */
+img {
+  width: 100%; }
 
- .futura-bold-font {
-  font-family: 'Futura Bold', 'Gill Sans', Arial, 'Helvetica Neue', Helvetica, sans-serif;
-  font-style: normal;
-  font-weight: bold;
- }
+header {
+  background-color: #861333; }
+  header .wrapper {
+    width: 94.5%;
+    margin: 0 auto; }
+  header h1 {
+    width: 12.2%;
+    padding-top: 26px;
+    min-width: 150px;
+    display: inline-block; }
+    header h1 img {
+      width: 100%; }
+  header .searchbox {
+    padding-top: 28px;
+    float: right; }
+    header .searchbox form {
+      border: 1px solid #fff;
+      background-color: #fff;
+      position: relative; }
+    header .searchbox .inp-search {
+      margin: 0 24px 0 5px;
+      border: none;
+      outline: none;
+      padding: 0;
+      background-color: #fff;
+      font-size: 12px;
+      font-family: sans-serif; }
+    header .searchbox .search-btn {
+      background: transparent;
+      border: none;
+      outline: none;
+      color: #555;
+      filter: FlipH;
+      /* IE 6/7/8 */
+      font-size: 12px;
+      -moz-transform: scaleX(-1);
+      /* Gecko */
+      -o-transform: scaleX(-1);
+      /* Opera */
+      -webkit-transform: scaleX(-1);
+      /* Webkit */
+      transform: scaleX(-1);
+      /* Standard */ }
+    header .searchbox .fa-sort-down {
+      position: absolute;
+      top: 30%;
+      right: 12%;
+      transform: translateY(-50%);
+      color: #555;
+      font-size: 18px; }
+  header .hamburger nav {
+    padding: 20px 0; }
+    header .hamburger nav .nav-li {
+      padding: 7px 0;
+      display: inline-block; }
+      header .hamburger nav .nav-li a {
+        padding: 7px;
+        background-color: rgba(0, 0, 0, 0);
+        color: #fff;
+        font-family: sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        text-decoration: none; }
+        header .hamburger nav .nav-li a:hover {
+          background-color: rgba(0, 0, 0, 0.4); }
+      header .hamburger nav .nav-li.active a {
+        background-color: rgba(0, 0, 0, 0.4); }
 
- /* ======= Your styling goes below ======= */
+.headingbar {
+  background-color: #a80f3c;
+  margin-bottom: 46px; }
+  .headingbar .wrapper {
+    width: 94.5%;
+    padding: 31px 0;
+    margin: 0 auto; }
+  .headingbar h3 {
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 28px; }
 
+.leftsidemenus {
+  width: 19.8%;
+  display: inline-block;
+  vertical-align: top; }
+  .leftsidemenus .wrapper {
+    width: 77.5%;
+    margin-left: 14%;
+    background-color: #f00; }
+  .leftsidemenus h3 {
+    padding-left: 5px;
+    font-family: sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    font-size: 13px; }
+
+.rightsidecontent {
+  width: 80.2%;
+  margin-left: -4px;
+  display: inline-block;
+  vertical-align: top; }
+  .rightsidecontent .wrapper {
+    width: 95.3%; }
+
+/*# sourceMappingURL=style.css.map */

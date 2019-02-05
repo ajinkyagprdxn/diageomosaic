@@ -1,0 +1,128 @@
+ /**
+  * Background shorthand properties
+  * @param  {text}    Color of font
+  * @param  {text}    Font family of font
+  * @param  {text}    Font size of font
+  * @param  {text}    Font style of font
+  * @param  {text}    Font weight of font
+  * @param  {text}    Letter spacing of font
+  * @param  {text}    Font line height of font
+  * @param  {text}    Word spacing of font
+  * @return   {text}  Font property with values.
+  */
+ @mixin font($color, $font, $size, $style, $weight, $letter-spacing, $line-height, $word-spacing) {
+     color: $color;
+     font-family: $font;
+     font-size: $size;
+     font-style: $style;
+     font-weight: $weight;
+     letter-spacing: $letter-spacing;
+     line-height: $line-height;
+     word-spacing: $word-spacing;
+ }
+ 
+ /**
+  * Background shorthand properties
+  * @param  {text}    Url of the Image
+  * @param  {text}    repeatation of the Image
+  * @param  {text}    position of the Image
+  * @param  {text}    size of the Image
+  * @return   {text}  background property with values.
+  */
+ @mixin background($url, $repeat, $position, $size) {
+     background: url($url) $repeat $position/$size;
+ }
+ 
+ /**
+  * position properties
+  * @param  {text}    Position
+  * @param  {text}    Z-index
+  * @param  {text}    Top
+  * @param  {text}    Right
+  * @param  {text}    Bottom
+  * @param  {text}    Left
+  * @return   {text}  Position with values.
+  */
+  @mixin position($position, $z-index, $top, $right, $bottom, $left) {
+   position: $position;
+   z-index: $z-index;
+   top: $top;
+   right: $right;
+   bottom: $bottom;
+   left: $left;
+ }
+ 
+@mixin box-shadow($property) {
+  -webkit-box-shadow: $property;
+     -moz-box-shadow: $property;
+      -ms-box-shadow: $property;
+       -o-box-shadow: $property;
+          box-shadow: $property;
+}
+
+ 
+ /**
+  * Transition shorthand properties
+  * @param  {text}    transition-property 
+  * @param  {text}    transition-duration
+  * @param  {text}    transition-delay
+  * @param  {text}    transition-timing-function
+  * @return   {text}  transition property with values.
+  */
+ @mixin transition($tran-property, $tran-duration, $tran-delay, $tran-timing-fun) {
+  -webkit-transition: $tran-property, $tran-duration, $tran-delay, $tran-timing-fun;
+     -moz-transition: $tran-property, $tran-duration, $tran-delay, $tran-timing-fun;
+      -ms-transition: $tran-property, $tran-duration, $tran-delay, $tran-timing-fun;
+       -o-transition: $tran-property, $tran-duration, $tran-delay, $tran-timing-fun;
+          transition: $tran-property, $tran-duration, $tran-delay, $tran-timing-fun;
+ }
+ 
+ /**
+  * Gradient shorthand properties
+  * @param  {text}    direction
+  * @param  {text}    color-start
+  * @param  {text}    color-stop
+  * @return   {text}  Linear-gradient property with values.
+  */
+ @mixin gradient ($direction, $color-start, $color-stop) {
+  -webkit-background: linear-gradient($direction, $color-start, $color-stop);
+     -moz-background: linear-gradient($direction, $color-start, $color-stop);
+      -ms-background: linear-gradient($direction, $color-start, $color-stop);
+       -o-background: linear-gradient($direction, $color-start, $color-stop);
+          background: linear-gradient($direction, $color-start, $color-stop);
+ }
+ 
+ /**
+ * Vendor Prefixes
+ * @param  {text}    property name
+ * @param  {text}    value of the property
+ * @return   {text}   property value with vendor prefixes.
+ */
+@mixin vendor($property, $content) {
+    -webkit-#{$property}: $content;
+    -moz-#{$property}: $content;
+    -ms-#{$property}: $content;
+    -o-#{$property}: $content;
+    #{$property}: $content;
+}
+
+/**
+  * Standard media queries for max-width
+  * @param  {text}    Device name
+  * @return   {text}  media query with content.
+  */
+ @mixin breakpoint($device) {
+     @if ($device == 'mac') {
+         @media screen and (max-width: $mac){ @content; }
+     } @else if($device == 'pc') {
+         @media screen and (max-width: $pc){ @content; }
+     } @else if($device == 'ipad') {
+         @media screen and (max-width: $ipad){ @content; }
+     } @else if($device == 'phone') {
+         @media screen and (max-width: $phone){ @content; }
+     } @else if($device == 's-phone') {
+     @media screen and (max-width: $s-phone){ @content; }
+     } @else if($device == 'iphone') {
+         @media screen and (max-width: $iphone){ @content; }
+     }
+ }
