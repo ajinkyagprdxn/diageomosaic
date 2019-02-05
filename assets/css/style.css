@@ -53,6 +53,9 @@ table {
 img {
   width: 100%; }
 
+.block {
+  display: block; }
+
 header {
   background-color: #861333; }
   header .wrapper {
@@ -139,21 +142,245 @@ header {
   vertical-align: top; }
   .leftsidemenus .wrapper {
     width: 77.5%;
-    margin-left: 14%;
-    background-color: #f00; }
+    margin-left: 14%; }
   .leftsidemenus h3 {
     padding-left: 5px;
+    padding-bottom: 10px;
     font-family: sans-serif;
     font-size: 22px;
     font-weight: 700;
     font-size: 13px; }
+  .leftsidemenus .pinkline {
+    height: 5px;
+    display: block;
+    background-color: #861333; }
+  .leftsidemenus .accordion {
+    width: 100%;
+    margin: 0 auto 20px;
+    background: #FFF;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    	/**
+     * Submenu
+     -----------------------------*/ }
+    .leftsidemenus .accordion .link {
+      cursor: pointer;
+      display: block;
+      padding: 15px 15px 15px 10px;
+      color: #4D4D4D;
+      font-family: sans-serif;
+      font-size: 14px;
+      border-bottom: 1px solid #CCC;
+      position: relative;
+      -webkit-transition: all 0.4s ease;
+      -o-transition: all 0.4s ease;
+      transition: all 0.4s ease; }
+    .leftsidemenus .accordion li i {
+      position: absolute;
+      top: 16px;
+      left: 12px;
+      font-size: 18px;
+      color: #595959;
+      -webkit-transition: all 0.4s ease;
+      -o-transition: all 0.4s ease;
+      transition: all 0.4s ease; }
+    .leftsidemenus .accordion li i.fa-sort-down {
+      right: 12px;
+      left: auto;
+      font-size: 16px; }
+    .leftsidemenus .accordion li.open .link {
+      color: #b63b4d; }
+    .leftsidemenus .accordion li.open i {
+      color: #b63b4d; }
+    .leftsidemenus .accordion li.open i.fa-sort-down {
+      -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+      -o-transform: rotate(180deg);
+      transform: rotate(180deg); }
+    .leftsidemenus .accordion .submenu {
+      display: none;
+      background: #444359;
+      font-size: 14px;
+      font-family: sans-serif; }
+      .leftsidemenus .accordion .submenu li {
+        border-bottom: 1px solid #4b4a5e; }
+      .leftsidemenus .accordion .submenu a {
+        display: block;
+        text-decoration: none;
+        color: #d9d9d9;
+        padding: 12px;
+        text-align: center;
+        -webkit-transition: all 0.25s ease;
+        -o-transition: all 0.25s ease;
+        transition: all 0.25s ease; }
+      .leftsidemenus .accordion .submenu a:hover {
+        background: #b63b4d;
+        color: #FFF; }
+  .leftsidemenus .sidebar-heading2 {
+    padding-top: 10px; }
+  .leftsidemenus .respbyoccasion li {
+    border-bottom: 1px solid #4b4a5e; }
+    .leftsidemenus .respbyoccasion li a {
+      padding: 7px 0 7px 10px;
+      display: block;
+      color: #4D4D4D;
+      font-family: sans-serif;
+      font-size: 14px;
+      text-decoration: none;
+      transition: all 0.5s linear; }
+      .leftsidemenus .respbyoccasion li a:hover {
+        color: #861333; }
 
 .rightsidecontent {
-  width: 80.2%;
-  margin-left: -4px;
+  width: 80.1%;
+  margin-left: -5px;
   display: inline-block;
   vertical-align: top; }
   .rightsidecontent .wrapper {
     width: 95.3%; }
+  .rightsidecontent .banner {
+    position: relative; }
+    .rightsidecontent .banner .bannertext {
+      width: 100%;
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+    .rightsidecontent .banner span, .rightsidecontent .banner h2 {
+      color: #fff;
+      font-family: sans-serif;
+      text-align: center; }
+    .rightsidecontent .banner span {
+      display: block;
+      font-size: 18px;
+      font-weight: 700; }
+    .rightsidecontent .banner h2 {
+      font-size: 70px; }
+  .rightsidecontent .adtext h3 {
+    padding: 28px 0 74px;
+    color: #333;
+    font-family: sans-serif;
+    font-size: 40px; }
+  .rightsidecontent .marketingassets h3 {
+    color: #000;
+    font-family: sans-serif;
+    font-size: 22px;
+    font-weight: 500; }
+  .rightsidecontent .marketingassets .greyline {
+    border-bottom: 1px solid #cfcfcf;
+    margin: 10px 0;
+    display: block; }
+  .rightsidecontent .marketingassets-ul li {
+    width: 30%;
+    padding: 20px 1.4%;
+    display: inline-block;
+    vertical-align: top; }
+    .rightsidecontent .marketingassets-ul li a {
+      color: #000;
+      text-decoration: none;
+      display: block;
+      position: relative;
+      background: rgba(0, 0, 0, 0);
+      transition: .5s all linear; }
+      .rightsidecontent .marketingassets-ul li a:hover .overlay {
+        background: rgba(0, 0, 0, 0.5);
+        color: #fff; }
+    .rightsidecontent .marketingassets-ul li h4, .rightsidecontent .marketingassets-ul li p {
+      padding: 10px 0;
+      font-family: sans-serif;
+      font-size: 16px;
+      line-height: 1.4;
+      text-align: center;
+      text-decoration: none; }
+    .rightsidecontent .marketingassets-ul li .overlay {
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0);
+      color: transparent;
+      transition: .5s linear all; }
+      .rightsidecontent .marketingassets-ul li .overlay p {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 22px;
+        font-weight: 700; }
+  .rightsidecontent .recipe-collection h3 {
+    color: #000;
+    font-family: sans-serif;
+    font-size: 22px;
+    font-weight: 500; }
+  .rightsidecontent .recipe-collection .greyline {
+    border-bottom: 1px solid #cfcfcf;
+    margin: 10px 0;
+    display: block; }
+  .rightsidecontent .recipe-col-ul {
+    margin-bottom: 50px; }
+    .rightsidecontent .recipe-col-ul li {
+      width: 30%;
+      padding: 20px 1.4%;
+      display: inline-block;
+      vertical-align: top; }
+      .rightsidecontent .recipe-col-ul li a {
+        color: #000;
+        text-decoration: none;
+        display: block;
+        position: relative;
+        background: rgba(0, 0, 0, 0);
+        transition: .5s all linear; }
+        .rightsidecontent .recipe-col-ul li a:hover .rc-overlay {
+          background: rgba(0, 0, 0, 0.5);
+          color: #fff; }
+      .rightsidecontent .recipe-col-ul li h4, .rightsidecontent .recipe-col-ul li p {
+        padding: 10px 0;
+        font-family: sans-serif;
+        font-size: 16px;
+        line-height: 1.4;
+        text-align: center;
+        text-decoration: none; }
+      .rightsidecontent .recipe-col-ul li .rc-overlay {
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0);
+        color: transparent;
+        transition: .5s linear all; }
+        .rightsidecontent .recipe-col-ul li .rc-overlay p {
+          width: 100%;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          font-size: 22px;
+          font-weight: 700; }
+
+.topbtn {
+  display: none;
+  padding: 5px 15px;
+  background-color: #a80f3c;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  color: #fff;
+  font-size: 32px;
+  cursor: pointer;
+  opacity: 1;
+  transition: all 0.5s ease 0s;
+  -moz-transition: all 0.5s ease 0s;
+  -webkit-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s; }
+
+.topbtn:hover {
+  opacity: .8; }
 
 /*# sourceMappingURL=style.css.map */

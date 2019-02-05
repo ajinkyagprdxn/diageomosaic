@@ -1,0 +1,18 @@
+.topbtn {  
+  display: none;
+  padding: 5px 15px;
+  background-color: $maroon-light;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  color: $white;
+  font-size: 32px;
+  cursor: pointer;
+  opacity: 1;
+  transition: all 0.5s ease 0s;
+  -moz-transition: all 0.5s ease 0s;
+  -webkit-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+}
+
+.topbtn:hover { opacity: .8; }
