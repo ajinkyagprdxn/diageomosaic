@@ -63,8 +63,8 @@ header {
     margin: 0 auto; }
   header h1 {
     width: 12.2%;
-    padding-top: 26px;
     min-width: 150px;
+    padding-top: 26px;
     display: inline-block; }
     header h1 img {
       width: 100%; }
@@ -73,20 +73,20 @@ header {
     float: right; }
     header .searchbox form {
       border: 1px solid #fff;
-      background-color: #fff;
-      position: relative; }
+      position: relative;
+      background-color: #fff; }
     header .searchbox .inp-search {
-      margin: 0 24px 0 5px;
-      border: none;
-      outline: none;
       padding: 0;
-      background-color: #fff;
-      font-size: 12px;
-      font-family: sans-serif; }
-    header .searchbox .search-btn {
-      background: transparent;
       border: none;
       outline: none;
+      margin: 0 24px 0 5px;
+      background-color: #fff;
+      font-family: sans-serif;
+      font-size: 12px; }
+    header .searchbox .search-btn {
+      border: none;
+      outline: none;
+      background: transparent;
       color: #555;
       filter: FlipH;
       /* IE 6/7/8 */
@@ -365,15 +365,15 @@ header {
           font-weight: 700; }
 
 .topbtn {
-  display: none;
   padding: 5px 15px;
-  background-color: #a80f3c;
+  display: none;
   position: fixed;
   right: 20px;
   bottom: 20px;
+  background-color: #a80f3c;
   color: #fff;
-  font-size: 32px;
   cursor: pointer;
+  font-size: 32px;
   opacity: 1;
   transition: all 0.5s ease 0s;
   -moz-transition: all 0.5s ease 0s;

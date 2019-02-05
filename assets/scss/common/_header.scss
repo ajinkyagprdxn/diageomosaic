@@ -7,8 +7,8 @@ header {
 	}
 	h1 {
 		width: 12.2%;
-		padding-top: 26px;
 		min-width: 150px;
+		padding-top: 26px;
 		display: inline-block;
 		img {
 			width: 100%;
@@ -19,22 +19,22 @@ header {
 		float: right;
 		form {
 			border: 1px solid $white;
-			background-color: $white;
 			position: relative;			
+			background-color: $white;
 		}
 		.inp-search {
-			margin: 0 24px 0 5px;
+			padding: 0;
 			border: none;
 			outline: none;
-			padding: 0;
+			margin: 0 24px 0 5px;
 			background-color: $white;
-			font-size: 12px;
 			font-family: sans-serif;
+			font-size: 12px;
 		}
 		.search-btn {
-			background: transparent;
 			border: none;
 			outline: none;
+			background: transparent;
 			color: $grey;
 			filter: FlipH; /* IE 6/7/8 */
 			font-size: 12px;			
