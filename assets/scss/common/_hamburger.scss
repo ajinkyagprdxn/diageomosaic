@@ -1,0 +1,157 @@
+.hamburger-btn { display: none; }
+
+nav li {
+  width: 19%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+nav a {
+  width: 100%;
+  padding: 10px 0;
+  background-color: #000;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  transition: .5s;
+}
+
+nav a:hover {
+  color: #f00;
+  background-color: #ff0;
+}
+
+@media screen and (max-width: 768px) {
+  
+  nav {
+    width: 100%;
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    opacity: 0;
+    animation-name: anim-cartoon2;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-name: navbar-style;
+  }
+
+  nav a {
+  background-color: transparent;
+  color: #000;
+  font-size: 18px;
+  }
+
+  nav a:hover {
+  color: #000;
+  background-color: transparent;
+  }
+
+  @keyframes navbar-style{
+from {
+  opacity: 0;
+  position: absolute;
+    left: -1000px;
+  }
+
+  to {
+    opacity: 1;
+    position: absolute;
+    left: 0px;
+  }
+
+ }
+
+  .hamburger {
+    width: 100%;
+    position: relative;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left:0;
+  }
+
+  .fullscreen {
+    height: 100vh;
+    position: relative;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left:0;
+    background-color: #fff;
+  }
+
+  .bodyh { overflow-y: hidden; }
+
+  .hamburger-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 5%;
+    background-color: #000;
+    cursor: pointer; 
+  }
+
+  .hambar {
+    width: 25px;
+    height: 4px;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);    
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(255, 195, 0,.8);
+    transition: .5s;
+  }
+
+  .hambar:before,
+  .hambar:after {
+    content: "";
+    width: 25px;
+    height: 4px;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);    
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(255, 195, 0,.8);
+    transition: .5s;
+  }
+
+  .hambar:before {
+    top: -8px;
+  }
+
+  .hambar:after {
+    top: 12px;
+  }
+
+  nav li {
+    width: 100%;
+    display: block;
+  }
+  
+  .hamburger-btn.active .hambar {
+    background: rgba(0,0,0,0);
+    box-shadow: 0 2px 5px rgba(0,0,0,0);
+  }
+
+
+  .hamburger-btn.active .hambar:before{
+    top:0;
+    left: 0;
+    transform: rotate(45deg);
+  }
+
+  .hamburger-btn.active .hambar:after{
+    top:0;
+    left: 0;
+    transform: rotate(135deg);
+  }
+}

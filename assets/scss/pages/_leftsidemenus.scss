@@ -1,11 +1,18 @@
 //Left Side Menus Section Begins
 .leftsidemenus {
-	width: 19.8%;	
+	width: 18%;	
 	display: inline-block;
 	vertical-align: top;
+	@media screen and (max-width: 768px) {
+		width: 100%;
+	}
 	.wrapper {
-		width: 77.5%;
+		width: 83.5%;
 		margin-left: 14%;
+		@media screen and (max-width: 768px) {
+			width: 90%;
+			margin: 0 auto;
+		}
 	}
 	h3 {
 		padding-bottom: 10px;
@@ -17,7 +24,7 @@
 	.pinkline {
 		height: 5px;
 		display: block;
-		background-color: $maroon-dark;
+		background-color: $maroon-light;
 	}
 	.accordion {
 	  width: 100%;
@@ -27,7 +34,7 @@
 	  border-radius: 4px;
 	  margin: 0 auto 20px;
 		  & .link {
-		  padding: 15px 15px 15px 10px;
+		  padding: 13px 15px 13px 10px;
 		  border-bottom: 1px solid #CCC;
 		  display: block;
 		  position: relative;
@@ -41,8 +48,8 @@
 		}
 			& li i {
 		  position: absolute;
-		  top: 16px;
-		  left: 12px;
+		  top: 45%;
+		  transform: translateY(-50%);
 		  font-size: 18px;
 		  color: #595959;
 		  -webkit-transition: all 0.4s ease;
@@ -50,7 +57,7 @@
 		  transition: all 0.4s ease;
 		}
 			& li i.fa-sort-down {
-		  right: 12px;
+		  right: 0;
 		  left: auto;
 		  font-size: 16px;
 		}
@@ -94,12 +101,12 @@
 			}
 		}
 	}
-	.sidebar-heading2 { padding-top: 10px; }
+	.sidebar-heading2 { padding-top: 30px; }
 	.respbyoccasion {
 		li {
-			border-bottom: 1px solid #4b4a5e;
+			border-bottom: 1px solid #ccc;
 			a{
-				padding: 7px 0 7px 10px;
+				padding: 13px 0 13px 10px;
 				display: block;
 				color: #4D4D4D;
 				font-family: sans-serif;

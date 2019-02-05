@@ -1,18 +1,22 @@
-.topbtn {  
-  padding: 5px 15px;
-  display: none;
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
-  background-color: $maroon-light;
-  color: $white;
-  cursor: pointer;
-  font-size: 32px;
-  opacity: 1;
-  transition: all 0.5s ease 0s;
-  -moz-transition: all 0.5s ease 0s;
-  -webkit-transition: all 0.5s ease 0s;
-  -o-transition: all 0.5s ease 0s;
+footer {
+  .wrapper{
+    position: relative;
+  }
+  .topbtn {  
+    padding: 5px 15px;
+    display: none;
+    position: fixed;
+    right: 3%;
+    bottom: 20px;
+    background-color: $maroon-light;
+    color: $white;
+    cursor: pointer;
+    font-size: 32px;
+    opacity: 1;
+    transition: all 0.5s ease 0s;
+    -moz-transition: all 0.5s ease 0s;
+    -webkit-transition: all 0.5s ease 0s;
+    -o-transition: all 0.5s ease 0s;
+    &:hover { opacity: .8; }
+  }
 }
-
-.topbtn:hover { opacity: .8; }

@@ -10,6 +10,10 @@
 	h3 {
 		color: $white;
 		font-family: sans-serif;
-		font-size: 28px;		
+		font-size: 28px;
+		text-align: left;
+		@media screen and (max-width: 768px) {
+			text-align: center;
+		}
 	}
 }

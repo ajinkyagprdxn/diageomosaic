@@ -1,2 +1,12 @@
 img { width: 100%; }
 .block { display: block; }
+
+.wrapper {
+	width: 100%;
+	max-width: 1500px;
+	margin: 0 auto;
+}
+
+.hide { display: none; }
+
+.bodyh { overflow-y: hidden; }
