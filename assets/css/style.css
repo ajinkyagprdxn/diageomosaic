@@ -56,8 +56,22 @@ img {
 .block {
   display: block; }
 
+.wrapper {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto; }
+
+.hide {
+  display: none; }
+
+.bodyh {
+  overflow-y: hidden; }
+
 header {
   background-color: #861333; }
+  @media screen and (max-width: 500px) {
+    header {
+      padding-bottom: 15px; } }
   header .wrapper {
     width: 94.5%;
     margin: 0 auto; }
@@ -66,11 +80,20 @@ header {
     min-width: 150px;
     padding-top: 26px;
     display: inline-block; }
+    @media screen and (max-width: 500px) {
+      header h1 {
+        display: block;
+        margin: 0 auto; } }
     header h1 img {
       width: 100%; }
   header .searchbox {
     padding-top: 28px;
     float: right; }
+    @media screen and (max-width: 500px) {
+      header .searchbox {
+        float: none;
+        margin-top: 15px;
+        padding-top: 0; } }
     header .searchbox form {
       border: 1px solid #fff;
       position: relative;
@@ -83,11 +106,17 @@ header {
       background-color: #fff;
       font-family: sans-serif;
       font-size: 12px; }
+      @media screen and (max-width: 500px) {
+        header .searchbox .inp-search {
+          width: 80%;
+          margin: 0 0 0 5px;
+          padding: 10px 0; } }
     header .searchbox .search-btn {
       border: none;
       outline: none;
       background: transparent;
       color: #555;
+      cursor: pointer;
       filter: FlipH;
       /* IE 6/7/8 */
       font-size: 12px;
@@ -106,6 +135,12 @@ header {
       transform: translateY(-50%);
       color: #555;
       font-size: 18px; }
+      @media screen and (max-width: 500px) {
+        header .searchbox .fa-sort-down {
+          top: 40%; } }
+      @media screen and (max-width: 500px) {
+        header .searchbox .fa-sort-down {
+          right: 3%; } }
   header .hamburger nav {
     padding: 20px 0; }
     header .hamburger nav .nav-li {
@@ -119,11 +154,134 @@ header {
         font-size: 12px;
         font-weight: 700;
         text-decoration: none; }
+        @media screen and (max-width: 768px) {
+          header .hamburger nav .nav-li a {
+            background-color: rgba(0, 0, 0, 0);
+            color: #a80f3c;
+            font-size: 16px;
+            display: block;
+            text-align: center; } }
         header .hamburger nav .nav-li a:hover {
-          background-color: rgba(0, 0, 0, 0.4); }
+          color: #000;
+          background-color: rgba(0, 0, 0, 0); }
       header .hamburger nav .nav-li.active a {
         background-color: rgba(0, 0, 0, 0.4); }
+        @media screen and (max-width: 768px) {
+          header .hamburger nav .nav-li.active a {
+            color: #000;
+            background-color: rgba(0, 0, 0, 0); } }
 
+@media screen and (max-width: 768px) {
+  nav {
+    width: 100%;
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    opacity: 0;
+    animation-name: anim-cartoon2;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-name: navbar-style; }
+
+  nav a {
+    background-color: transparent;
+    color: #000;
+    font-size: 18px; }
+
+  nav a:hover {
+    color: #000;
+    background-color: transparent; }
+
+  @keyframes navbar-style {
+    from {
+      opacity: 0;
+      position: absolute;
+      left: -1000px; }
+    to {
+      opacity: 1;
+      position: absolute;
+      left: 0px; } }
+  .hamburger {
+    width: 100%;
+    display: block;
+    position: relative;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; }
+
+  .fullscreen {
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    background-color: #fff; }
+
+  .hamburger-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    display: block;
+    position: absolute;
+    top: 25px;
+    left: 5%;
+    background-color: #000;
+    cursor: pointer; }
+
+  .hambar {
+    width: 25px;
+    height: 4px;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(255, 195, 0, 0.8);
+    transition: .5s; }
+
+  .hambar:before,
+  .hambar:after {
+    content: "";
+    width: 25px;
+    height: 4px;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(255, 195, 0, 0.8);
+    transition: .5s; }
+
+  .hambar:before {
+    top: -8px; }
+
+  .hambar:after {
+    top: 12px; }
+
+  nav li {
+    width: 100%;
+    display: block; }
+
+  .hamburger-btn.active .hambar {
+    background: rgba(0, 0, 0, 0);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0); }
+
+  .hamburger-btn.active .hambar:before {
+    top: 0;
+    left: 0;
+    transform: rotate(45deg); }
+
+  .hamburger-btn.active .hambar:after {
+    top: 0;
+    left: 0;
+    transform: rotate(135deg); } }
 .headingbar {
   background-color: #a80f3c;
   margin-bottom: 46px; }
@@ -134,15 +292,26 @@ header {
   .headingbar h3 {
     color: #fff;
     font-family: sans-serif;
-    font-size: 28px; }
+    font-size: 28px;
+    text-align: left; }
+    @media screen and (max-width: 768px) {
+      .headingbar h3 {
+        text-align: center; } }
 
 .leftsidemenus {
-  width: 19.8%;
+  width: 18%;
   display: inline-block;
   vertical-align: top; }
+  @media screen and (max-width: 768px) {
+    .leftsidemenus {
+      width: 100%; } }
   .leftsidemenus .wrapper {
-    width: 77.5%;
+    width: 83.5%;
     margin-left: 14%; }
+    @media screen and (max-width: 768px) {
+      .leftsidemenus .wrapper {
+        width: 90%;
+        margin: 0 auto; } }
   .leftsidemenus h3 {
     padding-bottom: 10px;
     padding-left: 5px;
@@ -152,7 +321,7 @@ header {
   .leftsidemenus .pinkline {
     height: 5px;
     display: block;
-    background-color: #861333; }
+    background-color: #a80f3c; }
   .leftsidemenus .accordion {
     width: 100%;
     background: #fff;
@@ -164,7 +333,7 @@ header {
      * Submenu
      -----------------------------*/ }
     .leftsidemenus .accordion .link {
-      padding: 15px 15px 15px 10px;
+      padding: 13px 15px 13px 10px;
       border-bottom: 1px solid #CCC;
       display: block;
       position: relative;
@@ -177,15 +346,15 @@ header {
       transition: all 0.4s ease; }
     .leftsidemenus .accordion li i {
       position: absolute;
-      top: 16px;
-      left: 12px;
+      top: 45%;
+      transform: translateY(-50%);
       font-size: 18px;
       color: #595959;
       -webkit-transition: all 0.4s ease;
       -o-transition: all 0.4s ease;
       transition: all 0.4s ease; }
     .leftsidemenus .accordion li i.fa-sort-down {
-      right: 12px;
+      right: 0;
       left: auto;
       font-size: 16px; }
     .leftsidemenus .accordion li.open .link {
@@ -217,11 +386,11 @@ header {
         background: #b63b4d;
         color: #FFF; }
   .leftsidemenus .sidebar-heading2 {
-    padding-top: 10px; }
+    padding-top: 30px; }
   .leftsidemenus .respbyoccasion li {
-    border-bottom: 1px solid #4b4a5e; }
+    border-bottom: 1px solid #ccc; }
     .leftsidemenus .respbyoccasion li a {
-      padding: 7px 0 7px 10px;
+      padding: 13px 0 13px 10px;
       display: block;
       color: #4D4D4D;
       font-family: sans-serif;
@@ -236,10 +405,22 @@ header {
   margin-left: -5px;
   display: inline-block;
   vertical-align: top; }
+  @media screen and (max-width: 768px) {
+    .rightsidecontent {
+      width: 100%;
+      margin-left: 0;
+      display: block; } }
   .rightsidecontent .wrapper {
     width: 95.3%; }
+    @media screen and (max-width: 768) {
+      .rightsidecontent .wrapper {
+        width: 90%;
+        margin: 0 auto; } }
   .rightsidecontent .banner {
     position: relative; }
+    @media screen and (max-width: 768px) {
+      .rightsidecontent .banner {
+        margin-top: 20px; } }
     .rightsidecontent .banner .bannertext {
       width: 100%;
       display: block;
@@ -255,18 +436,63 @@ header {
       display: block;
       font-size: 18px;
       font-weight: 700; }
+      @media screen and (max-width: 500px) {
+        .rightsidecontent .banner span {
+          font-size: 14px; } }
     .rightsidecontent .banner h2 {
       font-size: 70px; }
+      @media screen and (max-width: 980px) {
+        .rightsidecontent .banner h2 {
+          font-size: 42px; } }
+      @media screen and (max-width: 768px) {
+        .rightsidecontent .banner h2 {
+          font-size: 32px; } }
+      @media screen and (max-width: 500px) {
+        .rightsidecontent .banner h2 {
+          font-size: 20px; } }
   .rightsidecontent .adtext h3 {
     padding: 28px 0 74px;
     color: #333;
     font-family: sans-serif;
     font-size: 40px; }
+    @media screen and (max-width: 980px) {
+      .rightsidecontent .adtext h3 {
+        font-size: 32px; } }
+    @media screen and (max-width: 768px) {
+      .rightsidecontent .adtext h3 {
+        font-size: 24px; } }
+    @media screen and (max-width: 500px) {
+      .rightsidecontent .adtext h3 {
+        font-size: 18px; } }
   .rightsidecontent .marketingassets h3 {
+    display: inline-block;
     color: #000;
     font-family: sans-serif;
     font-size: 22px;
     font-weight: 500; }
+    @media screen and (max-width: 500px) {
+      .rightsidecontent .marketingassets h3 {
+        width: 100%;
+        padding-bottom: 10px;
+        display: block;
+        text-align: center; } }
+  .rightsidecontent .marketingassets .cockrec-link {
+    border-bottom: 1px solid transparent;
+    float: right;
+    color: #a80f3c;
+    font-family: sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+    transition: .5s all linear; }
+    @media screen and (max-width: 500px) {
+      .rightsidecontent .marketingassets .cockrec-link {
+        float: none;
+        display: inline-block;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%); } }
+    .rightsidecontent .marketingassets .cockrec-link:hover {
+      border-bottom: 1px solid #a80f3c; }
   .rightsidecontent .marketingassets .greyline {
     border-bottom: 1px solid #cfcfcf;
     margin: 10px 0;
@@ -276,6 +502,12 @@ header {
     padding: 20px 1.4%;
     display: inline-block;
     vertical-align: top; }
+    @media screen and (max-width: 768px) {
+      .rightsidecontent .marketingassets-ul li {
+        width: 100%;
+        padding: 20px 0; } }
+    .rightsidecontent .marketingassets-ul li img {
+      display: block; }
     .rightsidecontent .marketingassets-ul li a {
       color: #000;
       display: block;
@@ -316,6 +548,12 @@ header {
     font-family: sans-serif;
     font-size: 22px;
     font-weight: 500; }
+    @media screen and (max-width: 500px) {
+      .rightsidecontent .recipe-collection h3 {
+        width: 100%;
+        padding-bottom: 10px;
+        display: block;
+        text-align: center; } }
   .rightsidecontent .recipe-collection .greyline {
     border-bottom: 1px solid #cfcfcf;
     margin: 10px 0;
@@ -327,6 +565,12 @@ header {
       padding: 20px 1.4%;
       display: inline-block;
       vertical-align: top; }
+      @media screen and (max-width: 768px) {
+        .rightsidecontent .recipe-col-ul li {
+          width: 100%;
+          padding: 20px 0; } }
+      .rightsidecontent .recipe-col-ul li img {
+        display: block; }
       .rightsidecontent .recipe-col-ul li a {
         display: block;
         position: relative;
@@ -363,11 +607,13 @@ header {
           font-size: 22px;
           font-weight: 700; }
 
-.topbtn {
+footer .wrapper {
+  position: relative; }
+footer .topbtn {
   padding: 5px 15px;
   display: none;
   position: fixed;
-  right: 20px;
+  right: 3%;
   bottom: 20px;
   background-color: #a80f3c;
   color: #fff;
@@ -378,8 +624,7 @@ header {
   -moz-transition: all 0.5s ease 0s;
   -webkit-transition: all 0.5s ease 0s;
   -o-transition: all 0.5s ease 0s; }
-
-.topbtn:hover {
-  opacity: .8; }
+  footer .topbtn:hover {
+    opacity: .8; }
 
 /*# sourceMappingURL=style.css.map */
