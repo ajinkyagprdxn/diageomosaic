@@ -67,6 +67,21 @@ img {
 .bodyh {
   overflow-y: hidden; }
 
+@media screen and (max-width: 768px) {
+  nav {
+    display: none; } }
+
+@media screen and (max-width: 768px) {
+  .fullscreen {
+    height: 100vh;
+    position: relative;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    background-color: #fff; } }
+
 header {
   background-color: #861333; }
   @media screen and (max-width: 500px) {
@@ -141,11 +156,95 @@ header {
       @media screen and (max-width: 500px) {
         header .searchbox .fa-sort-down {
           right: 3%; } }
+  @media screen and (max-width: 768px) {
+    header .hamburger {
+      width: 100%;
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0; } }
+  @media screen and (max-width: 768px) {
+    header .hamburger .hamburger-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 5px;
+      display: block;
+      position: absolute;
+      top: 25px;
+      left: 5%;
+      background-color: #000;
+      cursor: pointer; }
+      header .hamburger .hamburger-btn.active .hambar {
+        background: rgba(0, 0, 0, 0);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0); }
+      header .hamburger .hamburger-btn.active .hambar:before {
+        top: 0;
+        left: 0;
+        transform: rotate(45deg); }
+      header .hamburger .hamburger-btn.active .hambar:after {
+        top: 0;
+        left: 0;
+        transform: rotate(135deg); } }
+  @media screen and (max-width: 768px) {
+    header .hamburger .hamburger-btn .hambar {
+      width: 25px;
+      height: 4px;
+      display: inline-block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(255, 195, 0, 0.8);
+      transition: .5s; }
+      header .hamburger .hamburger-btn .hambar:before, header .hamburger .hamburger-btn .hambar:after {
+        content: "";
+        width: 25px;
+        height: 4px;
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(255, 195, 0, 0.8);
+        transition: .5s; }
+      header .hamburger .hamburger-btn .hambar:before {
+        top: -8px; }
+      header .hamburger .hamburger-btn .hambar:after {
+        top: 12px; } }
   header .hamburger nav {
     padding: 20px 0; }
+    @media screen and (max-width: 768px) {
+      header .hamburger nav {
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        opacity: 0;
+        animation-name: anim-cartoon2;
+        animation-duration: .5s;
+        animation-fill-mode: forwards;
+        animation-timing-function: linear;
+        animation-name: navbar-style; }
+      @keyframes navbar-style {
+        from {
+          opacity: 0;
+          position: absolute;
+          left: -1000px; }
+        to {
+          opacity: 1;
+          position: absolute;
+          left: 0px; } } }
     header .hamburger nav .nav-li {
       padding: 7px 0;
       display: inline-block; }
+      @media screen and (max-width: 768px) {
+        header .hamburger nav .nav-li {
+          width: 100%;
+          display: block; } }
       header .hamburger nav .nav-li a {
         padding: 7px;
         background-color: rgba(0, 0, 0, 0);
@@ -162,8 +261,12 @@ header {
             display: block;
             text-align: center; } }
         header .hamburger nav .nav-li a:hover {
-          color: #000;
-          background-color: rgba(0, 0, 0, 0); }
+          color: #fff;
+          background-color: rgba(0, 0, 0, 0.5); }
+          @media screen and (max-width: 768px) {
+            header .hamburger nav .nav-li a:hover {
+              color: #a80f3c;
+              background-color: rgba(0, 0, 0, 0); } }
       header .hamburger nav .nav-li.active a {
         background-color: rgba(0, 0, 0, 0.4); }
         @media screen and (max-width: 768px) {
@@ -171,117 +274,6 @@ header {
             color: #000;
             background-color: rgba(0, 0, 0, 0); } }
 
-@media screen and (max-width: 768px) {
-  nav {
-    width: 100%;
-    display: none;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    opacity: 0;
-    animation-name: anim-cartoon2;
-    animation-duration: .5s;
-    animation-fill-mode: forwards;
-    animation-timing-function: linear;
-    animation-name: navbar-style; }
-
-  nav a {
-    background-color: transparent;
-    color: #000;
-    font-size: 18px; }
-
-  nav a:hover {
-    color: #000;
-    background-color: transparent; }
-
-  @keyframes navbar-style {
-    from {
-      opacity: 0;
-      position: absolute;
-      left: -1000px; }
-    to {
-      opacity: 1;
-      position: absolute;
-      left: 0px; } }
-  .hamburger {
-    width: 100%;
-    display: block;
-    position: relative;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0; }
-
-  .fullscreen {
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 1;
-    background-color: #fff; }
-
-  .hamburger-btn {
-    width: 40px;
-    height: 40px;
-    border-radius: 5px;
-    display: block;
-    position: absolute;
-    top: 25px;
-    left: 5%;
-    background-color: #000;
-    cursor: pointer; }
-
-  .hambar {
-    width: 25px;
-    height: 4px;
-    display: inline-block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(255, 195, 0, 0.8);
-    transition: .5s; }
-
-  .hambar:before,
-  .hambar:after {
-    content: "";
-    width: 25px;
-    height: 4px;
-    display: inline-block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(255, 195, 0, 0.8);
-    transition: .5s; }
-
-  .hambar:before {
-    top: -8px; }
-
-  .hambar:after {
-    top: 12px; }
-
-  nav li {
-    width: 100%;
-    display: block; }
-
-  .hamburger-btn.active .hambar {
-    background: rgba(0, 0, 0, 0);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0); }
-
-  .hamburger-btn.active .hambar:before {
-    top: 0;
-    left: 0;
-    transform: rotate(45deg); }
-
-  .hamburger-btn.active .hambar:after {
-    top: 0;
-    left: 0;
-    transform: rotate(135deg); } }
 .headingbar {
   background-color: #a80f3c;
   margin-bottom: 46px; }
@@ -385,6 +377,10 @@ header {
       .leftsidemenus .accordion .submenu a:hover {
         background: #b63b4d;
         color: #FFF; }
+        @media screen and (max-width: 768px) {
+          .leftsidemenus .accordion .submenu a:hover {
+            background: #444359;
+            color: #d9d9d9; } }
   .leftsidemenus .sidebar-heading2 {
     padding-top: 30px; }
   .leftsidemenus .respbyoccasion li {
@@ -399,6 +395,9 @@ header {
       transition: all 0.5s linear; }
       .leftsidemenus .respbyoccasion li a:hover {
         color: #861333; }
+        @media screen and (max-width: 768px) {
+          .leftsidemenus .respbyoccasion li a:hover {
+            color: #4D4D4D; } }
 
 .rightsidecontent {
   width: 80.1%;
@@ -493,6 +492,9 @@ header {
         transform: translateX(-50%); } }
     .rightsidecontent .marketingassets .cockrec-link:hover {
       border-bottom: 1px solid #a80f3c; }
+      @media screen and (max-width: 768px) {
+        .rightsidecontent .marketingassets .cockrec-link:hover {
+          border-bottom: 1px solid transparent; } }
   .rightsidecontent .marketingassets .greyline {
     border-bottom: 1px solid #cfcfcf;
     margin: 10px 0;
@@ -518,6 +520,10 @@ header {
       .rightsidecontent .marketingassets-ul li a:hover .overlay {
         background: rgba(0, 0, 0, 0.5);
         color: #fff; }
+        @media screen and (max-width: 768px) {
+          .rightsidecontent .marketingassets-ul li a:hover .overlay {
+            background: rgba(0, 0, 0, 0);
+            color: transparent; } }
     .rightsidecontent .marketingassets-ul li h4, .rightsidecontent .marketingassets-ul li p {
       padding: 10px 0;
       font-family: sans-serif;
@@ -581,6 +587,10 @@ header {
         .rightsidecontent .recipe-col-ul li a:hover .rc-overlay {
           background: rgba(0, 0, 0, 0.5);
           color: #fff; }
+          @media screen and (max-width: 768px) {
+            .rightsidecontent .recipe-col-ul li a:hover .rc-overlay {
+              background: rgba(0, 0, 0, 0);
+              color: transparent; } }
       .rightsidecontent .recipe-col-ul li h4, .rightsidecontent .recipe-col-ul li p {
         padding: 10px 0;
         font-family: sans-serif;
@@ -626,5 +636,8 @@ footer .topbtn {
   -o-transition: all 0.5s ease 0s; }
   footer .topbtn:hover {
     opacity: .8; }
+    @media screen and (max-width: 768px) {
+      footer .topbtn:hover {
+        opacity: 1; } }
 
 /*# sourceMappingURL=style.css.map */
