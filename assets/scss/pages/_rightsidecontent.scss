@@ -103,6 +103,9 @@
 			}
 			&:hover {
 				border-bottom: 1px solid $maroon-light;
+				@media screen and (max-width: 768px) {
+					border-bottom: 1px solid transparent;
+				}
 			}
 		}
 		.greyline {
@@ -132,6 +135,10 @@
 					&:hover .overlay {					
 					background: rgba(0,0,0,.5);
 					color: $white;
+					@media screen and (max-width: 768px) {
+						background: rgba(0,0,0,0);
+						color: transparent;
+					}
 				}
 			}
 			h4,p {				
@@ -207,6 +214,10 @@
 					&:hover .rc-overlay {
 					background: rgba(0,0,0,.5);
 					color: $white;
+					@media screen and (max-width: 768px) {
+						background: rgba(0,0,0,0);
+						color: transparent;
+					}
 				}
 			}
 			h4,p {				

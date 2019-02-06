@@ -98,6 +98,10 @@
 				& a:hover {
 			  background: #b63b4d;
 			  color: #FFF;
+			  @media screen and (max-width: 768px) {
+			  	background: #444359;
+			  	color: #d9d9d9;
+			  }
 			}
 		}
 	}
@@ -115,6 +119,9 @@
 				transition: all 0.5s linear;
 				&:hover {
 					color: $maroon-dark;
+					@media screen and (max-width: 768px) {
+						color: #4D4D4D;
+					}
 				}
  			}
 		}
